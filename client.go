@@ -21,11 +21,10 @@ func main() {
 			log.Fatal(err)
 		}
 		var reply bool
-		var res = "New"
 		err = client.Call("Listener.GetLine", line, &reply)
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(res)
+		fmt.Println(reply)
 	}
 }
